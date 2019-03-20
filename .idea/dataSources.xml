@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="GenieKetamine@localhost" uuid="d5e4902f-a8f8-4211-a3dc-77beb63b698b">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/GenieKetamine</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="GenieKetamine" uuid="8862aef9-1249-4f60-a44e-85e1ccb531f9">
+    <data-source source="LOCAL" name="identifier.sqlite" uuid="81bf8e2a-41ea-478d-847f-c62fc0999730">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/../GenieKetamine\GenieKetamine</jdbc-url>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
