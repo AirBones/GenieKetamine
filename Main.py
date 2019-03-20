@@ -5,12 +5,12 @@ from Classes import Drogues
 import sqlite3
 
 # connection
-conn = sqlite3.connect('genieketamine.db')
+conn = sqlite3.connect('GenieKetamine')
 cursor = conn.cursor()
 
 # Insertion des données
-data = {"name": "olivier", "age": 30}
-cursor.execute("""INSERT INTO users(name, age) VALUES(:name, :age)""", data)
+data = {"nom": "ketamax", "prix": 30.19}
+cursor.execute("""INSERT INTO DROGUE(nom, prix) VALUES(:nom, :prix)""", data)
 ketamine = Drogues.Drogues("ketamine", 2.5)
 
 print(ketamine)
