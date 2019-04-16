@@ -1,18 +1,30 @@
-# tests.py
+import random
+import unittest
 
-try:
-    import unittest2 as unittest
-except ImportError:
-    import unittest
+class RandomTest(unittest.TestCase):
 
+    """Test case utilisé pour tester les fonctions du module 'random'."""
 
-class SimpleTest(unittest.TestCase):
-    @unittest.skip("demonstrating skipping")
-    def test_skipped(self):
-        self.fail("shouldn't happen")
+    def setUp(self):
+        """Initialisation des tests."""
+        self.liste = list(range(10))
 
-    def test_pass(self):
-        self.assertEqual(10, 7 + 3)
+    def test_choice(self):
+        """Test le fonctionnement de la fonction 'random.choice'."""
+        elt = random.choice(self.liste)
+        self.assertIn(elt, self.liste)
 
-    def test_fail(self):
-        self.assertEqual(11, 7 + 3)
+    def test_shuffle(self):
+        """Test le fonctionnement de la fonction 'random.shuffle'."""
+        random.shuffle(self.liste)
+        self.liste.sort()
+        self.assertEqual(self.liste, list(range(10)))
+
+    def test_sample(self):
+        """Test le fonctionnement de la fonction 'random.sample'."""
+        extrait = random.sample(self.liste, 5)
+        for element in extrait:
+            self.assertIn(element, self.liste)
+
+        with self.assertRaises(ValueError):
+            random.sample(self.liste, 20)
