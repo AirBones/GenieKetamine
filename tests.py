@@ -3,7 +3,7 @@ import unittest
 
 class RandomTest(unittest.TestCase):
 
-    """Test case utilisé pour tester les fonctions du module 'random'."""
+    """Test case utilise pour tester les fonctions du module 'random'."""
 
     def setUp(self):
         """Initialisation des tests."""
