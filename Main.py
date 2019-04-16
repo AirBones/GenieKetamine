@@ -19,5 +19,4 @@ cursor.execute("""INSERT INTO DROGUE(nom, prix) VALUES(:nom, :prix)""", data)
 ketamine = Drogues.Drogues("ketamine", 2.5)
 
 print(ketamine)
-# print("Benjamin the boss!")
-#
+print("Benjamin the boss!")
