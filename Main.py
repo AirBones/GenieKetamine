@@ -4,9 +4,11 @@ from Classes import Drogues
 
 import sqlite3
 import os
+import re
 
 # var d'env'
-qualifier = os.environ['QUALIFIER']
+qualifier = re.sub(r'[-_]+', '', os.environ['BUILD_ID'])[0:12]
+
 # connection
 conn = sqlite3.connect('GenieKetamine')
 cursor = conn.cursor()
